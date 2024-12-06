@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+    </header>
+    <main>
+        <section id="adicionar-item">
+            <h2>Adicionar Item</h2>
+            <form id="form-adicionar" onsubmit="adicionarItem(event)">
+                <input type="number" id="item-id" placeholder="Código do Item" required>
+                <input type="text" id="item-nome" placeholder="Nome do Item" required>
+                <input type="text" id="item-categoria" placeholder="Categoria" required>
+                <input type="number" id="item-preco" placeholder="Preço (R$)" required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section id="buscar-categoria">
+            <h2>Buscar por Categoria</h2>
+            <input type="text" id="buscar-categoria-input" placeholder="Digite a categoria">
+            <button onclick="buscarPorCategoria()">Procurar</button>
+            <div id="resultados-busca"></div>
+        </section>
+
+        <section id="lista-estoque">
+            <h2>Itens no Estoque</h2>
+            <ul id="estoque-ul"></ul>
+        </section>
+
+        <section id="valor-total">
+            <h2>Valor Total</h2>
+            <p id="valor-total-texto"></p>
+        </section>
+        <div class="toast-container" id="toast-container"></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
